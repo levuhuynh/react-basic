@@ -12,6 +12,7 @@ import ListUser from './View/ListUser';
 import DetailUser from './View/DetailUser';
 import AddNewBlog from './View/AddNewBlog';
 import NotFound from './View/NotFound';
+import YoutubeSearch from './View/YoutubeSearch';
 
 import {
   BrowserRouter as Router,
@@ -19,6 +20,7 @@ import {
   Route,
   Link, NavLink
 } from "react-router-dom";
+
 
 const App = () => {
 
@@ -98,7 +100,7 @@ const App = () => {
               <DetailUser />
             </Route>
             <Route path="/Secret" >
-              <div>Nothing here</div>
+              <YoutubeSearch />
             </Route>
             <Route path="*">
               <NotFound />
