@@ -2,6 +2,7 @@ import "./YoutubeSearch.scss";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const YoutubeSearch = () => {
 
@@ -37,6 +38,7 @@ const YoutubeSearch = () => {
                     object.id = item.id.videoId;
                     object.title = item.snippet.title;
                     object.createdAt = item.snippet.publishedAt;
+                    object.author = item.snippet.channelTitle;
                     object.description = item.snippet.description;
 
                     result.push(object)
@@ -51,7 +53,7 @@ const YoutubeSearch = () => {
     return (
         <div className="youtube-search-container">
             <div className="yt-search"></div>
-            <input type="text" placeholder="Search"
+            <input type="text" placeholder="Search videos"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
             />
@@ -63,13 +65,15 @@ const YoutubeSearch = () => {
                             <div className="left">
                                 <iframe width="100%" height="300px"
                                     src={`https://www.youtube.com/embed/${item.id}`}
-                                    title="Lil Nas X, Jack Harlow - INDUSTRY BABY (Official Video)"
+                                    title={item.title}
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
                             </div>
                             <div className="right">
                                 <div className="title">
-                                    {item.title}
+                                    <Link to={`/Secret/${item.id}`} style={{ textDecoration: "none", color: "white", cursor: "pointer" }}>
+                                        {item.title}
+                                    </Link>
                                 </div>
                                 <div className="created-at">
                                     Created at: {moment(item.createdAt).format('DD-MM-YYYY HH:mm:ss A')}

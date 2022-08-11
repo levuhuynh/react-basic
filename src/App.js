@@ -13,6 +13,7 @@ import DetailUser from './View/DetailUser';
 import AddNewBlog from './View/AddNewBlog';
 import NotFound from './View/NotFound';
 import YoutubeSearch from './View/YoutubeSearch';
+import Video from './View/Video';
 
 import {
   BrowserRouter as Router,
@@ -99,8 +100,11 @@ const App = () => {
             <Route path="/user/:id">
               <DetailUser />
             </Route>
-            <Route path="/Secret" >
+            <Route path="/Secret" exact >
               <YoutubeSearch />
+            </Route>
+            <Route path="/Secret/:id" >
+              <Video />
             </Route>
             <Route path="*">
               <NotFound />

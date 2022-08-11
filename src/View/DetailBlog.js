@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useParams, useHistory } from "react-router-dom";
 import useFetch from "../customize/fetch";
 import "./Blog.scss"
@@ -7,7 +6,7 @@ const DetailBlog = () => {
     let { id } = useParams();
     let history = useHistory();
 
-    const { data: dataBlogDetail, isLoading, isError } //= useFetch('https://api.covid19api.com/country/vietnam?from=2022-05-01T00%3A00%3A00Z&to=2022-05-31T00%3A00%3A00Z')
+    const { data: dataBlogDetail, isLoading, isError }
         = useFetch(`https://jsonplaceholder.typicode.com/posts/${id}`, false)
 
 
