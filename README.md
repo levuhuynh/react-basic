@@ -4,3 +4,4 @@ Mô tả: những chức năng cơ bản sử dụng React
 3. Todo App: List todo đơn giản, thêm/xóa todo
 4. Blog App: Load data Blogs, thêm/xóa Blogs
 5. User: Load data Users, xem chi tiết thông tin User
+6. Chức năng tìm kiếm video Youtube
