@@ -73,7 +73,7 @@ const YoutubeSearch = () => {
                             </div>
                             <div className="right">
                                 <div className="title">
-                                    <Link to={`/Secret/${item.id}`} style={{ textDecoration: "none", color: (160, 0, 255), cursor: "pointer" }}>
+                                    <Link to={`/search/${item.id}/${item.title}`} style={{ textDecoration: "none", color: (160, 0, 255), cursor: "pointer" }}>
                                         {item.title}
                                     </Link>
                                 </div>

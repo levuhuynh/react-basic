@@ -100,10 +100,10 @@ const App = () => {
             <Route path="/user/:id">
               <DetailUser />
             </Route>
-            <Route path="/Secret" exact >
+            <Route path="/search" exact >
               <YoutubeSearch />
             </Route>
-            <Route path="/Secret/:id" >
+            <Route path="/search/:id/:title" >
               <Video />
             </Route>
             <Route path="*">
