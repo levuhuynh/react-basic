@@ -10,7 +10,7 @@ const Video = () => {
 
     return (
         <>
-            <img src={logo} style={{ height: "60px" }} />
+            <img src={logo} style={{ height: "50px" }} />
             <div className="video-container">
                 <iframe width="1024" height="576"
                     src={`https://www.youtube.com/embed/${id}`}
