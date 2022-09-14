@@ -14,6 +14,8 @@ import AddNewBlog from './View/AddNewBlog';
 import NotFound from './View/NotFound';
 import YoutubeSearch from './View/YoutubeSearch';
 import Video from './View/Video';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 import {
   BrowserRouter as Router,
@@ -21,6 +23,7 @@ import {
   Route,
   Link, NavLink
 } from "react-router-dom";
+// import { Tab } from 'bootstrap';
 
 
 const App = () => {
@@ -62,9 +65,6 @@ const App = () => {
 
         <header className="App-header">
           <Nav />
-
-
-          <img src={logo} className="App-logo" alt="logo" />
 
           <Switch>
             <Route path="/" exact>

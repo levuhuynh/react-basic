@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useFetch from "../customize/fetch";
 import moment from "moment";
+import logo from "../logo_byt.png";
 
 const Covid = () => {
 
@@ -19,16 +20,16 @@ const Covid = () => {
     return (
 
         <div style={{ width: '100%' }}>
-
+            <img src={logo} style={{ height: "100px" }} />
             <div style={{ fontSize: "30px", marginBottom: "15px" }}>Covid 19 tracking in Vietnam</div>
             {
                 showData === false ?
                     <div>
-                        <button onClick={() => { handleShowHide() }}>Show</button>
+                        <button onClick={() => { handleShowHide() }} style={{ fontSize: "15px" }}>Show</button>
                     </div>
                     :
                     <>
-                        <button onClick={() => { handleShowHide() }}>Hide</button>
+                        <button onClick={() => { handleShowHide() }} style={{ fontSize: "15px", marginBottom: "10px" }}>Hide</button>
                         <table id="customers" style={{ marginLeft: '0px' }}>
                             <thead>
                                 <tr>

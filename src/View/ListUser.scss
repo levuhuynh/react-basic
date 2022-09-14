@@ -10,9 +10,18 @@
             height: 50px;
             border: 1px solid grey;
             padding: 5px 0;
+            
         }
     }
 }
 .active{
-    background-color: #6be0edf3;
+    background-color: #f59bf5f3;
 }
+button {
+    margin: 10px 5px 0px 0px;
+    border-radius: 5px;
+}
+.user-detail {
+    text-align: left;
+}
+

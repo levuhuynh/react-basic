@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import logo from "../youtubelogo.png";
 
 const YoutubeSearch = () => {
 
@@ -52,6 +53,7 @@ const YoutubeSearch = () => {
 
     return (
         <div className="youtube-search-container">
+            <img src={logo} style={{ marginBottom: "20px", height: "80px" }} />
             <div className="yt-search"></div>
             <input type="text" placeholder="Search videos"
                 value={query}
@@ -71,7 +73,7 @@ const YoutubeSearch = () => {
                             </div>
                             <div className="right">
                                 <div className="title">
-                                    <Link to={`/Secret/${item.id}`} style={{ textDecoration: "none", color: "white", cursor: "pointer" }}>
+                                    <Link to={`/Secret/${item.id}`} style={{ textDecoration: "none", color: (160, 0, 255), cursor: "pointer" }}>
                                         {item.title}
                                     </Link>
                                 </div>

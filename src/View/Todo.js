@@ -1,3 +1,4 @@
+import logo from "../1560.png"
 
 const Todo = (props) => {
     const { todos, deleteATodo } = props;
@@ -8,8 +9,9 @@ const Todo = (props) => {
 
     return (
         <>
-            <div style={{ fontSize: "30px", marginBottom: "15px" }}>List todos</div>
-            <div className='todos-container'>
+            <img src={logo} style={{ height: "100px" }} />
+            <div style={{ fontSize: "30px", marginBottom: "15px" }}>To Do List</div>
+            <div className='todos-container' style={{ textAlign: "left" }}>
                 {todos.map(todo => {
                     return (
                         <li className='todo-child' key={todo.id}>{todo.title} <></>

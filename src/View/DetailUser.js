@@ -1,5 +1,6 @@
 import { useParams, useHistory } from "react-router-dom";
 import useFetch from "../customize/fetch";
+import "./ListUser.scss";
 
 const DetailUser = () => {
     let { id } = useParams();
@@ -16,13 +17,15 @@ const DetailUser = () => {
     // console.log('user: ', newData)
     return (
         <>
-            <div>Detail User with id : {id}</div>
+            <div>Detail User with id : <b> {id} </b></div>
             {isLoading === true && <div>Loading... </div>}
             {isError === true && <div>Something wrong...</div>}
             {newData && Object.getOwnPropertyNames(newData).length > 0 &&
                 <>
-                    <div style={{ paddingTop: '15px' }}>User's name: {newData.first_name} - {newData.last_name}</div>
-                    <div >User's email: {newData.email}</div>
+                    <div className="user-detail">
+                        <div style={{ paddingTop: '15px' }}><b>User's name:</b> {newData.first_name} - {newData.last_name}</div>
+                        <div ><b>User's email:</b> {newData.email}</div>
+                    </div>
                     <div>
                         <img src={newData.avatar} style={{ padding: "10px" }} />
                     </div>

@@ -17,7 +17,7 @@
         .title {
             padding: 10px 0;
             font-weight: bold;
-            color: #77f2ff;
+            color: rgb(160, 0, 255);
             font-size: 18px;
         }
         
@@ -41,7 +41,7 @@
     .title{
         font-weight: bold;
         padding-bottom: 10px;
-        color: #77f2ff;
+        color: #A000FF;
     }
 }
 .btn-add-new{
@@ -59,11 +59,12 @@
     padding: 5px;
     border: 1px solid gray;
     border-radius: 10px;
-    background-color: #282c34;
+    background-color: #b47cff;
     .text-add-new{
         margin: 10px 0;
-        color: #77f2ff;
+        color: white;
         text-align: center;
+        font-weight: 600;
     }
     .input-datas{
         padding: 5px;

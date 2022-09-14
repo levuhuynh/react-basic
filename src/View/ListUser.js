@@ -7,7 +7,6 @@ const ListUser = () => {
     const [page, setPage] = useState("1")
     const { data: dataUsers, isLoading, isError }
         = useFetch(`https://reqres.in/api/users?page=${page}`, false);
-
     const [active, setActive] = useState("1");
 
     let dataPage = [];
@@ -39,7 +38,7 @@ const ListUser = () => {
                             return (
                                 < div className="child" key={item.id} style={{ cursor: 'pointer' }
                                 }>
-                                    <Link to={`/user/${item.id}`} style={{ textDecoration: "none", color: "white" }}>
+                                    <Link to={`/user/${item.id}`} style={{ textDecoration: "none", color: "black" }}>
                                         {index + 1} - {item.first_name} - {item.last_name}</Link>
                                 </div>
                             )

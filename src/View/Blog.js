@@ -53,10 +53,10 @@ const Blog = () => {
                     </Button>
 
                     <Modal show={show} onHide={handleClose} style={{ backgroundColor: "rgb(5,5,5,0.3)" }}>
-                        <Modal.Header closeButton style={{ backgroundColor: "#282c34", color: "white" }}>
+                        <Modal.Header closeButton style={{ backgroundColor: "#ffcde9", color: "rgb(160, 0, 255)" }}>
                             <Modal.Title>Add new blogs</Modal.Title>
                         </Modal.Header>
-                        <Modal.Body style={{ backgroundColor: "#282c34" }}>
+                        <Modal.Body style={{ backgroundColor: "#ffcde9" }}>
                             <AddNewBlog handleAddNew={handleAddNew} />
                         </Modal.Body>
                     </Modal>
@@ -67,7 +67,7 @@ const Blog = () => {
                     return (
                         <div className='single-blog' key={item.id}>
                             <div className="title"><span>{item.title}</span>
-                                <span style={{ position: "relative", float: "right", top: "-20px", right: "-10px" }}
+                                <span style={{ position: "relative", float: "right", top: "-20px", right: "-10px", cursor: "pointer" }}
                                     onClick={() => deleteBlog(item.id)}
                                 >[X]</span>
                             </div>
